@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "122989500456",
+    "project_id": "valora-medac",
+    "storage_bucket": "valora-medac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:122989500456:android:e7aa4f453eb0f60fa63d1d",
+        "android_client_info": {
+          "package_name": "com.example.valora_profesores_medac"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmUpNBVUiB1jT9iIN6QofGLCQmUomhxmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

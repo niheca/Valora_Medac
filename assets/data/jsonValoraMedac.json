@@ -1,0 +1,51 @@
+{
+  "codigo": "12345",
+  "nombre": "Juan Perez",
+  "valoraciones": [
+    {
+      "nombre_pregunta": "Puntualidad",
+      "valoraciones": [8, 9, 7, 6, 10]
+    },
+    {
+      "nombre_pregunta": "Colaboración",
+      "valoraciones": [7, 9, 8, 7, 9]
+    },
+    {
+      "nombre_pregunta": "Responsabilidad",
+      "valoraciones": [10, 9, 9, 8, 10]
+    },
+    {
+      "nombre_pregunta": "Comunicación",
+      "valoraciones": [6, 7, 8, 7, 9]
+    },
+    {
+      "nombre_pregunta": "Liderazgo",
+      "valoraciones": [8, 8, 7, 8, 9]
+    }
+  ],
+  "media_valoraciones": [
+    {
+      "nombre_pregunta": "Puntualidad",
+      "valoracion_media": 8
+    },
+    {
+      "nombre_pregunta": "Colaboración",
+      "valoracion_media": 8
+    },
+    {
+      "nombre_pregunta": "Responsabilidad",
+      "valoracion_media": 9.2
+    },
+    {
+      "nombre_pregunta": "Comunicación",
+      "valoracion_media": 7.4
+    },
+    {
+      "nombre_pregunta": "Liderazgo",
+      "valoracion_media": 8
+    }
+  ],
+
+  
+  "media_total": 8.12
+}
