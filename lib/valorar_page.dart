@@ -186,7 +186,7 @@ class _ValorarPageState extends State<ValorarPage> {
           .collection('valoraciones')
           .add({
         'puntuaciones': scores,
-        // 'comentario': comentario, // Guardar el comentario sin funcion
+        'comentario': _comentarioController.text, // Guardar el comentario sin funcion
         'timestamp': FieldValue.serverTimestamp(),
       });
 
