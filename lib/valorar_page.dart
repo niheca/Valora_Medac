@@ -38,6 +38,7 @@ class _ValorarPageState extends State<ValorarPage> {
   ];
 
   late List<ValueNotifier<int>> puntuaciones;
+  final TextEditingController _comentarioController = TextEditingController();
 
   @override
   void initState() {
@@ -51,6 +52,7 @@ class _ValorarPageState extends State<ValorarPage> {
     for (var notifier in puntuaciones) {
       notifier.dispose();
     }
+     _comentarioController.dispose(); // limpiar el controlador del comentario
     super.dispose();
   }
 
@@ -126,6 +128,25 @@ class _ValorarPageState extends State<ValorarPage> {
                 );
               }),
 
+              // Campo de comentario
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text('Deja un comentario:', style: TextStyle(fontSize: 18)),
+                    TextField(
+                      controller: _comentarioController,
+                      decoration: InputDecoration(
+                        hintText: 'Escribe tu opinión aquí...',
+                        border: OutlineInputBorder(),
+                      ),
+                      maxLines: 5, // Permite múltiples líneas
+                    ),
+                  ],
+                ),
+              ),
+
               // Botón para enviar la valoración
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 20.0),
@@ -165,12 +186,16 @@ class _ValorarPageState extends State<ValorarPage> {
           .collection('valoraciones')
           .add({
         'puntuaciones': scores,
+        // 'comentario': comentario, // Guardar el comentario sin funcion
         'timestamp': FieldValue.serverTimestamp(),
       });
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(content: Text('Valoración enviada con éxito')),
       );
+
+      // Limpiar el campo de comentario después de enviar
+      _comentarioController.clear();
 
       // Regresar a la pantalla anterior
       Navigator.pop(context);
